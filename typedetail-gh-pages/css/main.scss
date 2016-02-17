@@ -1,0 +1,130 @@
+$tint: #EF431D;
+$dark: #332C21;
+$grey: #6A6256;
+$light: #D0CAC2;
+$white: #FDFCF6;
+$opensans: 'Open Sans', sans-serif;
+$playfair: 'Playfair Display', serif;
+$playfairsc: 'Playfair Display SC', serif;
+$easing: cubic-bezier(0.18, 0.57, 0.51, 1);
+
+.logo {
+	span {
+		color: $tint;
+	}
+}
+.share{
+	a:hover {
+		&::before {
+			color: $tint;
+		}
+	}	
+	.vote i::after {
+		color: $tint;
+	}
+}
+.title {
+	width: 570px;
+	border-top: dashed 1px $light;
+	font-family: $playfairsc;
+	font-size: 80px;
+	font-weight: 900;
+	font-style: italic;
+	color: $dark;
+	line-height: 120px;
+	text-align: right;
+	padding: 114px 20px 0 0;
+	margin-right: 60px;
+	float: left;
+	box-sizing: border-box;
+	position: relative;
+	span {
+		color: $tint;
+		position: relative;
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: -30px;
+			top: -7px;
+			width: 124px;
+			height: 124px;
+			border-radius: 50%;
+			border: dashed 1px $dark;
+		}
+	}
+}
+.index{
+	width: 570px;
+	border-top: dashed 1px $light;
+	box-sizing: border-box;
+	float: left;
+	font-family: $opensans;
+	position: relative;
+  	counter-reset: code-number-counter;
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		left: -30px;
+		top: 144px;
+		width: 1px;
+		bottom: 0;
+		border-right: dashed 1px $light;
+	}
+	p:first-child {
+		margin-top: 202px;
+	}
+	p {
+		width: 450px;
+		font-weight: 400;
+		font-size: 14px;
+		color: $dark;
+		line-height: 20px;
+		margin-top: 14px;
+	}
+	a {
+		color: $dark;
+  		font-weight: 600;
+		transition: all 0.4s $easing;
+	}
+	a:hover {
+		color: $tint;
+	}
+	a:visited {
+		color: $grey;
+	}
+	.roman-num {
+		ul {
+			width: 450px;
+			li {
+				counter-increment: index-number-counter;
+				width: 225px;
+				float: left;
+				&::before {
+					content: counter(index-number-counter, lower-roman)'.';
+				}
+			}	
+		}
+	}
+	ul {
+		margin-top: 14px;
+		width: 225px;
+		float: left;
+  		color: $light;
+		li {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 20px;
+			counter-increment: code-number-counter;
+			&::before {
+				content: counter(code-number-counter)'.';
+				display: inline-block;
+				width: 18px;
+				text-align: right;
+				color: $grey;
+				margin-right: 6px;
+			}
+		}
+	}
+}

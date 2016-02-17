@@ -1,0 +1,96 @@
+.logo span {
+  color: #ef431d; }
+
+.share a:hover::before {
+  color: #ef431d; }
+.share .vote i::after {
+  color: #ef431d; }
+
+.title {
+  width: 570px;
+  border-top: dashed 1px #d0cac2;
+  font-family: "Playfair Display SC", serif;
+  font-size: 80px;
+  font-weight: 900;
+  font-style: italic;
+  color: #332c21;
+  line-height: 120px;
+  text-align: right;
+  padding: 114px 20px 0 0;
+  margin-right: 60px;
+  float: left;
+  box-sizing: border-box;
+  position: relative; }
+  .title span {
+    color: #ef431d;
+    position: relative; }
+    .title span::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: -30px;
+      top: -7px;
+      width: 124px;
+      height: 124px;
+      border-radius: 50%;
+      border: dashed 1px #332c21; }
+
+.index {
+  width: 570px;
+  border-top: dashed 1px #d0cac2;
+  box-sizing: border-box;
+  float: left;
+  font-family: "Open Sans", sans-serif;
+  position: relative;
+  counter-reset: code-number-counter; }
+  .index::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -30px;
+    top: 144px;
+    width: 1px;
+    bottom: 0;
+    border-right: dashed 1px #d0cac2; }
+  .index p:first-child {
+    margin-top: 202px; }
+  .index p {
+    width: 450px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #332c21;
+    line-height: 20px;
+    margin-top: 14px; }
+  .index a {
+    color: #332c21;
+    font-weight: 600;
+    transition: all 0.4s cubic-bezier(0.18, 0.57, 0.51, 1); }
+  .index a:hover {
+    color: #ef431d; }
+  .index a:visited {
+    color: #6a6256; }
+  .index .roman-num ul {
+    width: 450px; }
+    .index .roman-num ul li {
+      counter-increment: index-number-counter;
+      width: 225px;
+      float: left; }
+      .index .roman-num ul li::before {
+        content: counter(index-number-counter,lower-roman) "."; }
+  .index ul {
+    margin-top: 14px;
+    width: 225px;
+    float: left;
+    color: #d0cac2; }
+    .index ul li {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      counter-increment: code-number-counter; }
+      .index ul li::before {
+        content: counter(code-number-counter) ".";
+        display: inline-block;
+        width: 18px;
+        text-align: right;
+        color: #6a6256;
+        margin-right: 6px; }
